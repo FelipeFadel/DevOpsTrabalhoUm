@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hadio</title>
+    <link rel="shortcut icon" href="./images/iconGuide.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <figure>
+          <img src="images/Hadio.png" class="logo" alt="Logo Hadio" />
+        </figure>
+        <nav>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <a href="#login" class="btn">Entrar</a>
+      </div>
+    </header>
+
+    <script src="script.js"></script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loja de Pedais</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Loja de Pedais</h1>
+      <button onclick="mostrarFormulario()">Adicionar Pedal</button>
+    </header>
+
+    <div id="pedais-container"></div>
+
+    <div id="formulario" style="display: none">
+      <h2>Adicionar/Editar Pedal</h2>
+      <input type="hidden" id="pedal-id" />
+      <input type="text" id="nome" placeholder="Nome do Pedal" />
+      <input type="text" id="marca" placeholder="Marca" />
+      <input type="number" id="preco" placeholder="Preço" />
+      <input type="text" id="imagem" placeholder="URL da Imagem" />
+      <textarea id="descricao" placeholder="Descrição"></textarea>
+      <button onclick="salvarPedal()">Salvar</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
