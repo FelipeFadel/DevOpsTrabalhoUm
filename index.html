@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <title>Hadio FX - Catálogo</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -123,46 +124,46 @@
 
     <section id="contato">
       <h2>Contato</h2>
-      <p>
-        Entre em contato conosco para pedidos especiais ou dúvidas técnicas.
-      </p>
-      <!-- Formulário de contato ou informações -->
+      <p>Entre em contato conosco para pedidos especiais ou dúvidas técnicas.</p>
+    
+      <form action="contato.php" method="POST">
+        <label for="nome">Nome:</label><br />
+        <input type="text" id="nome" name="nome" required /><br /><br />
+    
+        <label for="email">Email:</label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+    
+        <label for="mensagem">Mensagem:</label><br />
+        <textarea id="mensagem" name="mensagem" rows="5" required></textarea><br /><br />
+    
+        <button type="submit">Enviar</button>
+      </form>
+      <img src="rsc/images/HadioWhite.png" alt="Hadio FX logo" />
     </section>
 
     <div id="modalConta" class="modal">
       <div class="modal-content">
         <span class="close" onclick="fecharModal('modalConta')">&times;</span>
-        <h2>Sua Conta</h2>
-        <p>Gerencie suas informações e pedidos aqui.</p>
+        <h2>Login</h2>
+        <p>Entre na sua conta para continuar</p>
+        <input type="text" id="usuario" placeholder="Usuário" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <button onclick="fazerLogin()">Entrar</button>
       </div>
     </div>
 
-    <!-- MODAL: Carrinho -->
     <div id="modalCarrinho" class="modal">
       <div class="modal-content">
-        <span class="close" onclick="fecharModal('modalCarrinho')"
-          >&times;</span
-        >
+        <span class="close" onclick="fecharModal('modalCarrinho')">&times;</span>
         <h2>Carrinho</h2>
-        <p>Veja os itens que você adicionou ao carrinho.</p>
+        <div id="listaCarrinho">
+          <!-- Itens do carrinho serão inseridos aqui -->
+        </div>
+        <p id="totalCarrinho">Total: R$ 0,00</p>
+        <button onclick="finalizarPedido()">Finalizar Pedido</button>
       </div>
     </div>
 
-    <!-- Script para controle dos modais -->
-    <script>
-      function abrirModal(id) {
-        document.getElementById(id).style.display = "block";
-      }
 
-      function fecharModal(id) {
-        document.getElementById(id).style.display = "none";
-      }
-
-      window.onclick = function (event) {
-        if (event.target.classList.contains("modal")) {
-          event.target.style.display = "none";
-        }
-      };
-    </script>
   </body>
 </html>
