@@ -140,6 +140,14 @@ section {
   text-align: center;
 }
 
+.quantidade {
+  margin: 4px 0;
+}
+
+#modalAdicionarProduto{
+  color: #000;
+}
+
 .modal-content p, h2{
   color: #000;
 }
@@ -149,6 +157,21 @@ section {
   margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
+}
+
+.produto-card button {
+  margin: 5px 4px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.produto-card button:hover {
+  background-color: #333;
 }
 
 .modal-content button {
